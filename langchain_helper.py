@@ -22,7 +22,7 @@ Question: {input}"""
 
 def get_few_shot_db_chain():
     db_user = "root"
-    db_password = quote_plus("Nilamber123@")  # URL encode the password
+    db_password = quote_plus("**********")  # URL encode the password
     db_host = "localhost"
     db_name = "atliq_tshirts"
 
@@ -74,3 +74,4 @@ def get_few_shot_db_chain():
 
     chain = SQLDatabaseChain.from_llm(llm, db, verbose=True, prompt=few_shot_prompt)
     return chain
+
